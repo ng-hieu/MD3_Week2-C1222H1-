@@ -5,11 +5,39 @@
     <title>EditWeb</title>
 </head>
 <body>
-<form method="POST">
-<!--  <input type="text" name="idEdit" placeholder="Id" required>-->
-  <input type="text" name="nameEdit" placeholder="Name" required>
-  <input type="text" name="priceEdit" placeholder="Price" required>
+<form method="post">
+  <input type="hidden" name="editById" placeholder="Id" value="{id}" required>
+  <input type="text" name="nameEdit" placeholder="Name" value="{name}" required>
+  <input type="text" name="priceEdit" placeholder="Price" value="{price}" required>
   <button type="submit">Submit</button>
 </form>
 </body>
 </html>
+
+
+<!--else if(product.idEdit){-->
+<!--let listProduct = JSON.parse(fs.readFileSync('data.json', 'utf-8'))-->
+<!--let index = listProduct.findIndex(item=>{-->
+<!--console.log('checkkk')-->
+<!--console.log(item.id)-->
+<!--return item.id == product.idEdit;-->
+<!--})-->
+<!--let productEdit = listProduct[index];-->
+<!--fs.readFile('WebEdit.html', 'utf-8',(err, webEdit) => {-->
+<!--webEdit = webEdit.replace('{id}', productEdit.id);-->
+<!--webEdit = webEdit.replace('{name}', productEdit.name);-->
+<!--webEdit = webEdit.replace('{price}', productEdit.price);-->
+<!--res.write(webEdit);-->
+<!--res.end();-->
+<!--})-->
+<!--}-->
+<!--else if(product.editById){-->
+<!--let dataWantEdit = JSON.parse(fs.readFileSync('data.json','utf-8'));-->
+<!--let index = dataWantEdit.findIndex(item => {-->
+<!--return item.id == product.editById;-->
+<!--})-->
+<!--dataWantEdit[index]={id: product.editById, name: product.nameEdit, price: product.priceEdit};-->
+<!--fs.writeFileSync('data.json', JSON.stringify(dataWantEdit));-->
+<!--res.writeHead(301, {location:'/'});-->
+<!--res.end()-->
+<!--}-->

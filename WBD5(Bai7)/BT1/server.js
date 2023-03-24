@@ -13,13 +13,19 @@ let server = http.createServer((req, res) => {
                 for (let i = 0; i < listProduct.length; i++) {
                     value +=
                         `<tr>
-                        <th>${listProduct[i].id = i+1}</th>
+                        <th>${listProduct[i].id}</th>
                         <th>${listProduct[i].name}</th>
                         <th>${listProduct[i].price}</th>
                         <th>
                             <form method="post">
                                 <input type="hidden" name = "deleteById" value="${listProduct[i].id}">
                                 <button type="submit">Delete</button>
+                            </form>
+                        </th>
+                        <th>
+                            <form method="post">
+                                <input type="text" name = "idEdit" value="${listProduct[i].id}">
+                                <button type="submit">Edit</button>
                             </form>
                         </th>
                     </tr>`
@@ -37,18 +43,43 @@ let server = http.createServer((req, res) => {
         });
         req.on("end", () => {
             let product = qs.parse(data);
-            let listProduct = JSON.parse(fs.readFileSync('data.json', "utf-8"));
             if (product.deleteById) {
-                for (let i = 0; i < listProduct.length; i++) {
-                    if ((i+1) == product.deleteById) {
-                        listProduct.splice(i, 1);
-                        break;
-                    }
-                }
+                let listProduct = JSON.parse(fs.readFileSync('data.json', "utf-8"));
+                let index = listProduct.findIndex(item=>{
+                    return item.id == product.deleteById
+                })
+                listProduct.splice(index,1)
                 fs.writeFileSync('data.json', JSON.stringify(listProduct));
                 res.writeHead(301, {'location': '/'});
                 res.end();
-            } else {
+            } else if(product.idEdit){
+                let listProduct = JSON.parse(fs.readFileSync('data.json', 'utf-8'))
+                console.log('checkkkk')
+                console.log(listProduct)
+                let index = listProduct.findIndex(item=>{
+                    return item.id == product.idEdit;
+                })
+                let productEdit = listProduct[index];
+                fs.readFile('WebEdit.html', 'utf-8',(err, webEdit) => {
+                    webEdit = webEdit.replace('{id}', productEdit.id);
+                    webEdit = webEdit.replace('{name}', productEdit.name);
+                    webEdit = webEdit.replace('{price}', productEdit.price);
+                    res.write(webEdit);
+                    res.end();
+                })
+            } else if(product.editById){
+                let dataWantEdit = JSON.parse(fs.readFileSync('data.json','utf-8'));
+                let index = dataWantEdit.findIndex(item => {
+                    return item.id == product.editById;
+                })
+                dataWantEdit[index]={id: product.editById, name: product.nameEdit, price: product.priceEdit};
+                fs.writeFileSync('data.json', JSON.stringify(dataWantEdit));
+                res.writeHead(301, {location:'/'});
+                res.end()
+            }
+            else {
+                let listProduct = JSON.parse(fs.readFileSync('data.json', "utf-8"));
+                product.id = (listProduct.length>0)? +listProduct[listProduct.length-1].id+1:1;
                 listProduct.push(product);
                 fs.writeFileSync('data.json', JSON.stringify(listProduct));
                 res.writeHead(301, {'location': '/'});
