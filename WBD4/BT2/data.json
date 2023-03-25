@@ -1,0 +1,182 @@
+[
+  {
+    "numbA": "5",
+    "numbB": "7",
+    "caculator": "sub"
+  },
+  {
+    "numbA": "0",
+    "numbB": "0",
+    "caculator": "sum"
+  },
+  {
+    "numbA": "5",
+    "numbB": "5",
+    "caculator": "sum"
+  },
+  {
+    "numbA": "4",
+    "numbB": "4",
+    "caculator": "sum"
+  },
+  {
+    "numbA": "3",
+    "numbB": "023",
+    "caculator": "sum"
+  },
+  {
+    "numbA": "5",
+    "numbB": "5",
+    "caculator": "multi"
+  },
+  {
+    "numbA": "5",
+    "numbB": "5",
+    "caculator": "div"
+  },
+  {
+    "numbA": "5",
+    "numbB": "5",
+    "caculator": "sum"
+  },
+  {
+    "numbA": "05",
+    "numbB": "05",
+    "caculator": "sum"
+  },
+  {
+    "numbA": "5",
+    "numbB": "5",
+    "caculator": "sum"
+  },
+  {
+    "numbA": "6",
+    "numbB": "6",
+    "caculator": "sum"
+  },
+  {
+    "numbA": "6",
+    "numbB": "6",
+    "caculator": "sum"
+  },
+  {
+    "numbA": "6",
+    "numbB": "6",
+    "caculator": "sum"
+  },
+  {
+    "numbA": "6",
+    "numbB": "6",
+    "caculator": "sum"
+  },
+  {
+    "numbA": "6",
+    "numbB": "6",
+    "caculator": "sum"
+  },
+  {
+    "numbA": "6",
+    "numbB": "6",
+    "caculator": "sum"
+  },
+  {
+    "numbA": "06",
+    "numbB": "6",
+    "caculator": "sum"
+  },
+  {
+    "numbA": "6",
+    "numbB": "6",
+    "caculator": "sum"
+  },
+  {
+    "numbA": "6",
+    "numbB": "6",
+    "caculator": "sum"
+  },
+  {
+    "numbA": "6",
+    "numbB": "6",
+    "caculator": "sum"
+  },
+  {
+    "numbA": "5",
+    "numbB": "5",
+    "caculator": "sum"
+  },
+  {
+    "numbA": "5",
+    "numbB": "5",
+    "caculator": "sum"
+  },
+  {
+    "numbA": "5",
+    "numbB": "5",
+    "caculator": "sum"
+  },
+  {
+    "numbA": "4",
+    "numbB": "4",
+    "caculator": "sum"
+  },
+  {
+    "numbA": "5",
+    "numbB": "5",
+    "caculator": "div"
+  },
+  {
+    "numbA": "5",
+    "numbB": "2",
+    "caculator": "multi"
+  },
+  {
+    "numbA": "5",
+    "numbB": "43",
+    "caculator": "sum"
+  },
+  {
+    "numbA": "10",
+    "numbB": "02",
+    "caculator": "sum"
+  },
+  {
+    "numbA": "10",
+    "numbB": "02",
+    "caculator": "sum"
+  },
+  {
+    "numbA": "1",
+    "numbB": "1",
+    "caculator": "sum"
+  },
+  {
+    "numbA": "12",
+    "numbB": "12",
+    "caculator": "sub"
+  },
+  {
+    "numbA": "122",
+    "numbB": "12",
+    "caculator": "sum"
+  },
+  {
+    "numbA": "122",
+    "numbB": "12",
+    "caculator": "multi"
+  },
+  {
+    "numbA": "122",
+    "numbB": "12",
+    "caculator": "div"
+  },
+  {
+    "numbA": "122",
+    "numbB": "12",
+    "caculator": "div"
+  },
+  {
+    "numbA": "01",
+    "numbB": "01",
+    "caculator": "sum"
+  }
+]
