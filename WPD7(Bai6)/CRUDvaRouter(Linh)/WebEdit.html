@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>EditWeb</title>
 </head>
 <body>
-$END$
+<form method="post">
+    <input type="hidden" name="editById" placeholder="Id" value="{id}" required>
+    <input type="text" name="nameEdit" placeholder="Name" value="{name}" required>
+    <input type="text" name="priceEdit" placeholder="Price" value="{price}" required>
+    <button type="submit">Submit</button>
+</form>
 </body>
 </html>
